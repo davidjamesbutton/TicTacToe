@@ -28,7 +28,7 @@ function turnClick(square) {
     if (typeof origBoard[square.target.id] == 'number') {
         turn(square.target.id, huPlayer);
     }
-    if (!checkTie()) {
+    if (!checkWin(origBoard, huPlayer) && !checkTie()) {
         turn(bestSpot(), aiPlayer);
     }
 }
